@@ -1,0 +1,100 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(./abstract-background-with-dark-pixel-style-design_1048-15775.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: 'Tetris', sans-serif;
+  color: white;
+  margin: 20px;
+  align-self: flex-start;
+}
+
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.tetris-playground {
+  width: 320px;
+  height: 640px;
+  background: linear-gradient(to bottom, #001f3f, #0074D9);
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.cell {
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.control-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.control-button:hover {
+  background-color: #777;
+  transform: scale(1.1);
+}
+
+@media (max-height: 700px) {
+  .tetris-playground {
+    height: 500px; /* Уменьшаем высоту */
+    width: 250px; /* Соответственно уменьшаем ширину */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .tetris-playground {
+    width: 90%; /* Поле занимает 90% ширины экрана */
+    height: auto; /* Высота пропорционально ширине */
+    max-height: 500px;
+  }
+
+  .control-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
